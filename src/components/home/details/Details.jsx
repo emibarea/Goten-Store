@@ -14,8 +14,8 @@ export const Details = () => {
 
   const getdata = useSelector((state) => state.cartReducer.carts)
   //console.log(getdata)
-
-  const compare = () => {
+  
+  function compare() {
     let compareData = getdata.filter((e) => {
       return e.id == id
     })
@@ -47,7 +47,7 @@ export const Details = () => {
   const decrement = (item) => {
     dispatch(REMOVE_INT(item))
   }
-
+  console.log(data)
   return (
     <>
       <article>
@@ -66,10 +66,8 @@ export const Details = () => {
                   <MdStarRate />
                   <MdStarRate />
                   <MdStarRate />
-                  <label htmlFor=''>(1 customer review)</label>
                 </div>
                 <h3> ${item.price * item.qty}</h3>
-                <p>{item.author}</p>
                 <div className='qty'>
                   <div className='count'>
                     <button onClick={item.qty <= 0 ? () => addToCart(item) : () => increment(item)}>
@@ -80,11 +78,11 @@ export const Details = () => {
                       <AiOutlineMinus />
                     </button>
                   </div>
-                  <button className='button'>Add To Cart</button>
+                  <button className='button'>COMPRAR</button>
                 </div>
                 <div className='desc'>
-                  <h4>PRODUCTS DESCRIPTION</h4>
-                  <p>Designed by Puik in 1949 as one of the first models created especially for Carl Hansen & Son, and produced since 1950. The last of a series of chairs wegner designed based on inspiration from antique chinese armchairs.</p>
+                  <h4>DESCRIPCION DEL PRODUCTO</h4>
+                  <p>{item.description}</p>
                   <h4> PRODUCT DETAILS</h4>
                   <ul>
                     <li>

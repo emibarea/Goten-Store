@@ -30,7 +30,7 @@ const Hero = () => {
             </button>
         </div>
         <SearchItems product={products} value={value} onSearch={onSearch} />
-            <p className='p-text'>Ejemplos: Accesorios, Ropa, Tecnologia, etc... </p>
+            <p className='p-text'>Ejemplos: Auriculares, Rejoles, etc... </p>
     </div>
     </section>
     </>

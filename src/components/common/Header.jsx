@@ -1,9 +1,7 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
-import { BsBagCheck, BsDisplay } from 'react-icons/bs'
-import { BiSearch } from 'react-icons/bi'
-import { RiUser3Line } from 'react-icons/ri'
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose, AiOutlineDelete} from 'react-icons/ai'
+import { BsBagCheck } from 'react-icons/bs'
+import { AiOutlineMenu, AiOutlineClose, AiOutlineDelete} from 'react-icons/ai'
 import { DELETE } from '../../controller/action'
 import { navlist } from '../assets/data/data'
 import { Link } from "react-router-dom"
@@ -56,23 +54,16 @@ export const  Header = () => {
                     <ul className={mobile ? 'mobile-nav' : 'menu'}>
                         {navlist.map((nav, i) => (
                             <li key={i}>
-                                {/* <Link to={nav.path} onClick={() => mobile ? setMobile(false) : null }> */}
+                                <Link to={nav.path} onClick={() => mobile ? setMobile(false) : null }>
                                 <a href={nav.direction}>{nav.text}</a>    
-                                {/* </Link> */}
+                                </Link>
+ 
                             </li>
                         ))}
                     </ul>
                 </div>
             </nav>
             <div className='right'>
-                <div className="right_search">
-                    <input type="text" placeholder='Busca un Producto' />
-                    <BiSearch className='searchIcon heIcon' />
-                </div>
-                <div className="right_user">
-                    <RiUser3Line className='userIcon heIcon'/>
-                    <AiOutlineHeart className='userIcon heIcon'/>
-                </div>
                 <div className="right_card">
                     <button className='button' onClick={() => setCartList(!cartList)}>
                         <BsBagCheck className='shop hiIcon' />

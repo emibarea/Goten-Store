@@ -7,10 +7,6 @@ const initialStore = {
 export const cartReducer = (state = initialStore, action) => {
   switch (action.type) {
     case ADD_CART:
-      /*return {
-        ...state,
-        carts: [...state.carts, action.payload],
-      }*/
       const itemIndex = state.carts.findIndex((item) => item.id === action.payload.id)
       if (itemIndex >= 0) {
         state.carts[itemIndex].qty += 1

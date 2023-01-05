@@ -1,0 +1,51 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    height: auto;
+    width: 100vw;
+}
+
+.bottom-social{
+    height: 200px;
+    width: 100vw;
+}
+.social-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: 100px;
+    margin: 2rem;
+}
+.social-item > img{
+    width: auto;
+    height: 100%;
+}
+.social-item > p {
+    margin-top: 1rem;
+}
+
+@media (max-width: 1100px){
+    .top-logo{
+        width: 200px;
+    }
+    .top-logo > img{
+        width: 100%;
+
+    }
+    .social-item{
+        height: 70px;
+        width: 70px;
+    }
+}

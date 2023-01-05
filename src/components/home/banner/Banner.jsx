@@ -10,7 +10,7 @@ export const Banner = () => {
             <div className='post' key={items.id}>
               <div className='content'>
                 <div className='img'>
-                  <img src={items.cover} alt='' />
+                  <img src={items.cover} alt=''/> 
                 </div>
                 <div className='text'>
                   <h2>{items.title1}</h2>

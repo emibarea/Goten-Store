@@ -8,7 +8,7 @@ export const Product = () => {
   return (
     <section className="product">
         <div className="container">
-            <Heading title='Nuestros Productos' desc='Podes agregarlos al carrito para continuar con tu proceso de compra o darle 🤍 para agregarlos a favoritos!' />
+            <Heading title='Nuestros Productos' desc='Podes ver la informacion de los productos o agregarlos al carrito para continuar con tu proceso de compra.' />
             <ProductItem data={data} />
         </div>
     </section>
